@@ -1,4 +1,4 @@
-package grpcgateway.handlers
+package grpcGateway.handlers
 
 import java.nio.file.{ Path, Paths }
 

@@ -1,6 +1,6 @@
-package grpcgateway.server
+package grpcGateway.server
 
-import grpcgateway.handlers.GrpcGatewayHandler
+import grpcGateway.handlers.GrpcGatewayHandler
 import io.netty.bootstrap.ServerBootstrap
 import io.netty.channel.{ ChannelFuture, EventLoopGroup }
 

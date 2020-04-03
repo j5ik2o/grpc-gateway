@@ -1,4 +1,4 @@
-package grpcgateway.generators
+package grpcGateway.generators
 
 import com.google.api.AnnotationsProto
 import com.google.api.HttpRule.PatternCase

@@ -1,4 +1,4 @@
-package grpcgateway.handlers
+package grpcGateway.handlers
 
 import io.grpc.Status.Code
 

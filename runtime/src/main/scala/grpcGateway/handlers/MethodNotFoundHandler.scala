@@ -1,4 +1,4 @@
-package grpcgateway.handlers
+package grpcGateway.handlers
 
 import io.netty.channel.{ ChannelFutureListener, ChannelHandlerContext, ChannelInboundHandlerAdapter }
 import io.netty.handler.codec.http.{ FullHttpRequest, HttpResponseStatus }

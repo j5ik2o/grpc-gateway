@@ -1,4 +1,4 @@
-package grpcgateway
+package grpcGateway
 
 import java.nio.charset.StandardCharsets
 

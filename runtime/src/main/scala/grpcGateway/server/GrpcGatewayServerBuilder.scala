@@ -1,6 +1,6 @@
-package grpcgateway.server
+package grpcGateway.server
 
-import grpcgateway.handlers.{ GrpcGatewayHandler, MethodNotFoundHandler, SwaggerHandler }
+import grpcGateway.handlers.{ GrpcGatewayHandler, MethodNotFoundHandler, SwaggerHandler }
 import io.netty.bootstrap.ServerBootstrap
 import io.netty.channel.ChannelInitializer
 import io.netty.channel.nio.NioEventLoopGroup
