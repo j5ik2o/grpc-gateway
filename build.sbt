@@ -48,7 +48,7 @@ lazy val generator = (project in file("generator"))
   .settings(baseSettings)
   .settings(
     name := "grpc-gateway-generator",
-    scalaVersion := scala212Version,
+    scalaVersion := scala211Version,
     libraryDependencies ++= Seq(
         "com.thesamet.scalapb" %% "compilerplugin"            % scalapbVersion,
         "com.thesamet.scalapb" %% "scalapb-runtime-grpc"      % scalapbVersion,
