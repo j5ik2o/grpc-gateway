@@ -24,26 +24,16 @@ val baseSettings = Seq(
   publishMavenStyle := true,
   publishArtifact in Test := false,
   pomIncludeRepository := { _ => false },
-  pomExtra := {
-    <url>https://github.com/j5ik2o/grpc-gateway</url>
-      <licenses>
-        <license>
-          <name>The MIT License</name>
-          <url>http://opensource.org/licenses/MIT</url>
-        </license>
-      </licenses>
-      <scm>
-        <url>git@github.com:j5ik2o/grpc-gateway.git</url>
-        <connection>scm:git:github.com/j5ik2o/grpc-gateway</connection>
-        <developerConnection>scm:git:git@github.com:j5ik2o/grpc-gateway.git</developerConnection>
-      </scm>
-      <developers>
-        <developer>
-          <id>j5ik2o</id>
-          <name>Junichi Kato</name>
-        </developer>
-      </developers>
-  },
+  licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/JulienSt/ezXML/master/LICENSE")),
+  scmInfo := Some(
+      ScmInfo(
+        url("https://github.com/j5ik2o/grpc-gateway"),
+        "scm:git:git@github.com:j5ik2o/grpc-gateway.git"
+      )
+    ),
+  developers := List(
+      Developer(id = "j5ik2o", name = "Junichi Kato", email = "j5ik2o@gmail.com", url = url("https://blog.j5ik2o.me"))
+    ),
   publishTo := sonatypePublishToBundle.value,
   credentials := {
     val ivyCredentials = (baseDirectory in LocalRootProject).value / ".credentials"
