@@ -8,6 +8,7 @@ val scala213Version = "2.13.1"
 val baseSettings = Seq(
   sonatypeProfileName := "com.github.j5ik2o",
   organization := "com.github.j5ik2o",
+  organizationHomepage := Some(url("https://github.com/j5ik2o")),
   scalacOptions ++= {
     Seq(
       "-feature",
@@ -24,11 +25,12 @@ val baseSettings = Seq(
   publishMavenStyle := true,
   publishArtifact in Test := false,
   pomIncludeRepository := { _ => false },
-  licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/JulienSt/ezXML/master/LICENSE")),
+  licenses := Seq("MIT" -> url("https://raw.githubusercontent.com/j5ik2o/grpc-gateway/master/LICENSE")),
+  homepage := Some(url("https://github.com/j5ik2o/grpc-gateway")),
   scmInfo := Some(
       ScmInfo(
-        url("https://github.com/j5ik2o/grpc-gateway"),
-        "scm:git:git@github.com:j5ik2o/grpc-gateway.git"
+        browseUrl = url("https://github.com/j5ik2o/grpc-gateway"),
+        connection = "scm:git:git@github.com:j5ik2o/grpc-gateway.git"
       )
     ),
   developers := List(
