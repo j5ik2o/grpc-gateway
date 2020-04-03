@@ -57,7 +57,6 @@ lazy val generator = (project in file("generator"))
   .settings(
     name := "grpc-gateway-generator",
     scalaVersion := scala212Version,
-    crossScalaVersions := Seq(scala210Version, scala212Version),
     libraryDependencies ++= Seq(
         "com.thesamet.scalapb" %% "compilerplugin"            % scalapbVersion,
         "com.thesamet.scalapb" %% "scalapb-runtime-grpc"      % scalapbVersion,
@@ -76,7 +75,7 @@ lazy val runtime = (project in file("runtime"))
   .settings(
     name := "grpc-gateway-runtime",
     scalaVersion := scala213Version,
-    crossScalaVersions := Seq(scala211Version, scala212Version, scala213Version),
+    crossScalaVersions := Seq(scala212Version, scala213Version),
     libraryDependencies ++= Seq(
         "commons-io"           % "commons-io"                 % "2.6",
         "com.thesamet.scalapb" %% "compilerplugin"            % scalapbVersion,
@@ -85,7 +84,8 @@ lazy val runtime = (project in file("runtime"))
         "io.grpc"              % "grpc-all"                   % grpcJavaVersion,
         "org.webjars"          % "swagger-ui"                 % "3.19.4",
         "com.google.protobuf"  % "protobuf-java"              % protobufVersion,
-        "com.google.api.grpc"  % "proto-google-common-protos" % "1.17.0"
+        "com.google.api.grpc"  % "proto-google-common-protos" % "1.17.0",
+        "javax.activation"     % "javax.activation-api"       % "1.2.0"
       ),
     PB.protoSources in Compile += target.value / "protobuf_external",
     includeFilter in PB.generate := new SimpleFilter(file =>
